@@ -39,6 +39,9 @@
 
 #### Rate limiting 
 	The pattern for Rate Limitation focuses on controlling incoming requests to protect the application in case of peak loads. Here we have used sliding window 	algorithm which resolves the problem of burst inflow of request precisely and handles the rate limiting in a dynamic fashion. It also employs better memory 	consumption (~timestamp * maximum allowable requests). 
+	
+	
+	
 #### Flow
 	When a user request registers with the application. Admin user can configure the rate limits for the user wrt API's. This data gets stored in the redis 	cache. Requests to the application should be redirected to rate limiter using the filter/interceptor/API gateway/load balancer etc. When a request reached 	rate limiter , redis configuration is checked against the number of request already served in the last (60s) time window. If the request served is less 	than the maximum allowed , the incoming request is served else rejected with a prompt for later trial. The limit gets refreshed at the next 60s window. 
 
