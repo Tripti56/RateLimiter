@@ -45,7 +45,7 @@
 #### Flow
 	When a user request registers with the application. Admin user can configure the rate limits for the user wrt API's. This data gets stored in the redis 	cache. Requests to the application should be redirected to rate limiter using the filter/interceptor/API gateway/load balancer etc. When a request reached 	rate limiter , redis configuration is checked against the number of request already served in the last (60s) time window. If the request served is less 	than the maximum allowed , the incoming request is served else rejected with a prompt for later trial. The limit gets refreshed at the next 60s window. 
 	
-	![RateLimit](https://github.com/Tripti56/RateLimiter/blob/master/rateLimter/rateLimter/rate-limit.png)
+![rate-limit](https://user-images.githubusercontent.com/8221481/67385937-ac491d00-f5b1-11e9-98c4-9561c4275c81.png)
 
 
 #### Assumptions and limitations 
