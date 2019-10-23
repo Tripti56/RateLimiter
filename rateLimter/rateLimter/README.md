@@ -2,7 +2,7 @@
 
 ## Steps to configure the application 
 
-### Softwares requied
+### Softwares required
 		IDE - Eclipse or intelliJ
 		Java 1.8
 		Maven 3.6.0
